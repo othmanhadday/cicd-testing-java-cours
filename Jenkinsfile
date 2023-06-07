@@ -55,7 +55,8 @@ node {
             }
         }
 
-    } finally {
+    }
+    finally {
         deleteDir()
         sendEmail(EMAIL_RECIPIENTS);
     }
@@ -89,10 +90,10 @@ def runApp(containerName, tag, dockerHubUser, httpPort, envName) {
 }
 
 def sendEmail(recipients) {
-    mail(
+  /*  mail(
             to: recipients,
             subject: "Build ${env.BUILD_NUMBER} - ${currentBuild.currentResult} - (${currentBuild.fullDisplayName})",
-            body: "Check console output at: ${env.BUILD_URL}/console" + "\n")
+            body: "Check console output at: ${env.BUILD_URL}/console" + "\n")*/
 }
 
 String getEnvName(String branchName) {
